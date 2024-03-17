@@ -1,8 +1,8 @@
 <?php
-include 'connection.php'
+include ('connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST["email"]);
+    $email = $_POST["email"];
     $password = $_POST["password"];
 
     if (empty($email) || empty($password)) {
@@ -11,26 +11,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode($response);
         exit;
     }
-
-    $check_user = $mysqli->prepare('SELECT UserID, password FROM users WHERE email=?');
+ 
+    $check_user = $mysqli->prepare('SELECT UserID, email, password FROM users WHERE email=?');
     $check_user->bind_param('s', $email);
     $check_user->execute();
     $check_user->store_result();
+    $check_user->bind_result($UserID, $email, $hashed_password);
+    $check_user->fetch();
+    $num_rows = $check_user->num_rows();
 
-    if ($check_user->num_rows() == 0) {
+    if ($num_rows == 0) {
         $response["status"] = "error";
         $response["message"] = "User with this email does not exist.";
         echo json_encode($response);
         exit;
 }
-
-$check_user->bind_result($userId, $hashed_password);
-$check_user->fetch();
+echo "Stored hashed password: " . $hashed_password . "\n";
+echo "Entered password: " . $password . "\n";
 
  if (password_verify($password, $hashed_password)) {
         $response["status"] = "success";
         $response["message"] = "Login successful.";
-        $response["user_id"] = $userId;
+        $response['user_id'] = $UserID;
+        $response['email'] = $email;
     } else {
         $response["status"] = "error";
         $response["message"] = "Incorrect password.";
