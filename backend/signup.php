@@ -2,8 +2,8 @@
 include 'connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = trim($_POST["name"]);
-    $email = trim($_POST["email"]);
+    $name = $_POST["name"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
     $gender = $_POST["gender"];
 
