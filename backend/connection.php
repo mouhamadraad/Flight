@@ -7,7 +7,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 $host = "localhost";
 $db_user = "root";
 $db_pass = null;
-$db_name = "arilinedb";
+$db_name = "airlinedb";
 
 $mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
 
