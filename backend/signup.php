@@ -1,40 +1,39 @@
 <?php
-include ('connection.php');
-header("Access-Control-Allow-Origin: http://127.0.0.1:5500");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
+include 'connection.php';
 
-$userName = isset($_POST['username']) ? $_POST['username'] : '';
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST["name"]);
+    $email = trim($_POST["email"]);
+    $password = $_POST["password"];
+    $gender = $_POST["gender"];
 
-$hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
-
-$check_user = $mysqli->prepare('SELECT  username, email FROM  users WHERE username=? OR email=?');
-$check_user->bind_param('ss', $username, $email);
-$check_user->execute();
-$check_user->store_result();
-$user_exists = $check_user->num_rows();
+    if (empty($name) || empty($email) || empty($password) || empty($gender)) {
+        $response["status"] = "error";
+        $response["message"] = "Please fill out all fields.";
+        echo json_encode($response);
+        exit;
+    }
 
 
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-if($user_exists > 0){
+    $check_user = $mysqli->prepare('SELECT email FROM users WHERE email=?');
+    $check_user->bind_param('s', $email);
+    $check_user->execute();
+    $check_user->store_result();
+    $user_exists = $check_user->num_rows();
 
-    $response["status"] = "error";
-    $response["message"] = "Username or email already exists";
-
-}
-else {
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-    $query = $mysqli->prepare('INSERT INTO users(username,password,email) VALUES(?,?,?)');
-    $query->bind_param('sss', $userName, $hashed_password, $email);
-    $query->execute();
+    if ($user_exists > 0) {
+        $response["status"] = "error";
+        $response["message"] = "email already exists.";
+    } else {
+        $query = $mysqli->prepare('INSERT INTO users (name, email, password, gender) VALUES (?, ?, ?, ?)');
+        $query->bind_param('ssss', $name, $email, $hashed_password, $gender);
+        $query->execute();
     
-    $response['status'] = "success";
-    $response['message'] = "user $userName was created successfully";
+        $response['status'] = "success";
+        $response['message'] = "User $email was created successfully.";
+    }
+    
+    echo json_encode($response);
 }
-
-echo json_encode($response);
-
-?>

@@ -20,7 +20,7 @@ body {
   position: relative;
   z-index: 1;
   width: 25%;
-  height: 60vh;
+  height: 70vh;
   margin-top: 10%;
   gap: 30px;
   border-radius: 14px;
@@ -36,4 +36,10 @@ body {
 .error-message {
   font-size: 100%;
   color: red;
+}
+
+.user-login-radio {
+  display: flex;
+  width: 85%;
+  justify-content: space-evenly;
 }
