@@ -1,5 +1,4 @@
 * {
-  color: #fbfbfc;
 }
 
 body {
@@ -20,6 +19,11 @@ body {
   height: 50vh;
   gap: 30px;
 }
+
+.signin-title {
+  color: #fbfbfb;
+}
+
 .wrapper {
   position: relative;
   z-index: 1;
@@ -39,6 +43,11 @@ login-link .signin-title {
 .login-link a {
   color: #3ab8ff;
 }
+
+.login-link {
+  color: #fbfbfb;
+}
+
 .login-link a:hover {
   cursor: pointer;
   color: #7587dd;
