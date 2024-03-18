@@ -1,0 +1,51 @@
+body {
+  background-image: url("/frontend/assets/profile-bg.jpg");
+}
+
+header {
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.header-right {
+  display: flex;
+  gap: 8%;
+  margin-right: 12%;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+  background-color: red;
+}
+
+.user-card p {
+  font-size: 200%;
+}
+
+.info-wrapper {
+  background-color: blue;
+}
+
+.info-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  background-color: yellow;
+  height: 15vh;
+}
+
+.display-flex {
+  gap: 8px;
+}
+
+.past-bookings {
+  background-color: burlywood;
+}
