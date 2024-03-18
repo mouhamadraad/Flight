@@ -11,6 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode($response);
         exit;
     }
+
+    $response = array();
  
     $check_user = $mysqli->prepare('SELECT UserID, email, password FROM users WHERE email=?');
     $check_user->bind_param('s', $email);
@@ -23,21 +25,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($num_rows == 0) {
         $response["status"] = "error";
         $response["message"] = "User with this email does not exist.";
-        echo json_encode($response);
-        exit;
-}
-echo "Stored hashed password: " . $hashed_password . "\n";
-echo "Entered password: " . $password . "\n";
 
- if (password_verify($password, $hashed_password)) {
+} else{
+    if(password_verify($password, $hashed_password)) {
         $response["status"] = "success";
         $response["message"] = "Login successful.";
-        $response['user_id'] = $UserID;
+        $response['UserID'] = $UserID;
         $response['email'] = $email;
     } else {
         $response["status"] = "error";
         $response["message"] = "Incorrect password.";
     }
+}
 
     echo json_encode($response);
 }
