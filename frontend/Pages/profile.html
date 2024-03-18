@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" , href="/frontend/Styling/profile.css" />
+    <link rel="stylesheet" , href="/frontend/Styling/shared.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>AirDash</h2>
+      </div>
+
+      <div class="header-right">
+        <h2>Home</h2>
+        <h2>About</h2>
+        <h2>Book</h2>
+        <h2>Profile</h2>
+        <h2>Logout</h2>
+      </div>
+    </header>
+
+    <div class="user-card">
+      <p id="user-greeting"></p>
+      <p>Balance:</p>
+      <p>200 coins</p>
+    </div>
+
+    <div class="info-wrapper">
+      <div class="title centered">
+        <h2>Basic Information</h2>
+      </div>
+      <div class="info-items">
+        <div class="display-flex">
+          <label>Gender: </label>
+          <p id="user-gender">Gender Here</p>
+        </div>
+
+        <div class="display-flex">
+          <label>Accessibility Needs: </label>
+          <p id="user-accessibility">Accessibility Needs Here</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-wrapper">
+      <div class="title centered">
+        <h2>Flight Preference</h2>
+      </div>
+      <div class="info-items">
+        <div class="display-flex">
+          <label>Seat Preference: </label>
+          <p id="user-seat">Seat Preference here</p>
+        </div>
+
+        <div class="display-flex">
+          <label>Special Assistance: </label>
+          <p id="user-assistance">Special Assistance Here</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="past-bookings centered">
+      <div class="booking card">Random booking card</div>
+    </div>
+
+    <script src="/frontend/scripts/profile.js"></script>
+  </body>
+</html>

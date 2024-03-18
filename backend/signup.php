@@ -37,3 +37,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     echo json_encode($response);
 }
+
+elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    header("Content-Type: application/json");
+
+
+    if (!isset($_GET['UserID'])) {
+        $response = [
+            'status' => 'error',
+            'message' => 'UserID is missing'
+        ];
+        echo json_encode($response);
+        exit;
+    }
+
+    $user_id = $_GET['UserID'];
+
+    $stmt = $mysqli->prepare("SELECT * FROM users WHERE UserID = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $userInfo = [];
+        while ($row = $result->fetch_assoc()) {
+            $userInfo[] = $row;
+        }
+        $response = [
+            'status' => 'success',
+            'user_info' => $userInfo
+        ];
+    } else {
+        $response = [
+            'status' => 'error',
+            'message' => 'No user found with the given ID'
+        ];
+    }
+
+    echo json_encode($response);
+}
