@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Styling/admin_feedback.css" />
+    <title>Admin | Feedback</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Feedback and Ratings</h1>
+      <table id="feedbackTable">
+        <thead>
+          <tr>
+            <th>Review ID</th>
+            <th>User ID</th>
+            <th>Flight ID</th>
+            <th>Rating</th>
+            <th>Review Text</th>
+          </tr>
+        </thead>
+        <tbody id="feedbackBody"></tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../Scripts/admin_feedback.js"></script>
+  </body>
+</html>
