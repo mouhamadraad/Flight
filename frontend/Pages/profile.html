@@ -21,11 +21,52 @@
         <h2>Logout</h2>
       </div>
     </header>
+    <div class="overlay hidden" id="overlay">
+      <div class="edit-popup hidden" id="edit-popup">
+        <div class="user-login">
+          <input placeholder="Full Name" id="full-name" />
+        </div>
+
+        <div class="user-login">
+          <input placeholder="Email" id="email" />
+        </div>
+
+        <div class="user-login">
+          <input placeholder="Accessibility" id="accessibility" />
+        </div>
+
+        <div class="user-login">
+          <input placeholder="Seat" id="seat" />
+        </div>
+
+        <div class="user-login">
+          <input placeholder="Assistance" id="assistance" />
+        </div>
+
+        <div class="user-login-radio">
+          <label for="gender">Gender:</label><br />
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </div>
+        <div class="edit-btn centered">
+          <button class="editing hidden" id="confirm-btn">Confirm</button>
+          <button class="editing hidden" id="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
 
     <div class="user-card">
       <p id="user-greeting"></p>
       <p>Balance:</p>
       <p>200 coins</p>
+    </div>
+
+    <div class="edit-btn centered">
+      <button class="edit" id="edit-btn">Edit</button>
     </div>
 
     <div class="info-wrapper">

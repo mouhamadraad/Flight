@@ -3,11 +3,11 @@ include 'connection.php';
 
 $response = array();
 
-// API to send a picture of the user to the database
+// Still not tested using JS
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
     $image = $_FILES["image"]["tmp_name"];
-    $image_data = addslashes(file_get_contents($image)); // Addslashes to escape special characters
+    $image_data = addslashes(file_get_contents($image)); 
 
     $response = array();
 

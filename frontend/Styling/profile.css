@@ -1,51 +1,135 @@
 body {
   background-image: url("/frontend/assets/profile-bg.jpg");
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 header {
   display: flex;
-  /* background-color: red; */
   justify-content: space-between;
-  padding: 1%;
+  align-items: center;
+  padding: 1% 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-right {
   display: flex;
-  gap: 8%;
-  margin-right: 12%;
+  gap: 20px;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #333;
 }
 
 .user-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  margin: auto;
-  background-color: red;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 40%;
+  margin: 20px auto;
 }
 
 .user-card p {
-  font-size: 200%;
+  margin: 5px 0;
+  font-size: 24px;
+  color: #333;
 }
 
 .info-wrapper {
-  background-color: blue;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.title h2 {
+  margin: 0;
+  color: #333;
 }
 
 .info-items {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15%;
-  background-color: yellow;
-  height: 15vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .display-flex {
-  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
 }
 
 .past-bookings {
-  background-color: burlywood;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.booking {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.edit-btn {
+  gap: 15px;
+}
+
+.edit-btn button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 0px 6px 12px #c5c5c5, 0px -6px 12px #ffffff;
+}
+
+.edit-btn button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.edit-btn button:hover {
+  opacity: 0.85;
+}
+
+.edit-popup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 5%;
+  width: 50%;
+  height: 60vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 178, 248);
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
