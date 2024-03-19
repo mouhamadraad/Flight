@@ -1,6 +1,7 @@
 <?php
 include ('connection.php');
 
+//store user information from signup into the DB
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -38,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode($response);
 }
 
+// Get and display userinfo depending on the ID
 elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    header("Content-Type: application/json");
 
 
     if (!isset($_GET['UserID'])) {
