@@ -14,15 +14,18 @@
       </div>
 
       <div class="header-right">
-        <h2>Home</h2>
-        <h2>About</h2>
-        <h2>Book</h2>
-        <h2>Profile</h2>
-        <h2>Logout</h2>
+        <h2 class="header-btn">Home</h2>
+        <h2 class="header-btn">About</h2>
+        <h2 class="header-btn">Book</h2>
+        <h2 class="header-btn">Profile</h2>
+        <h2 id="logout" class="header-btn">Logout</h2>
       </div>
     </header>
     <div class="overlay hidden" id="overlay">
       <div class="edit-popup hidden" id="edit-popup">
+        <div class="centered">
+          <h2>Edit Information</h2>
+        </div>
         <div class="user-login">
           <input placeholder="Full Name" id="full-name" />
         </div>
@@ -74,13 +77,13 @@
         <h2>Basic Information</h2>
       </div>
       <div class="info-items">
-        <div class="display-flex">
-          <label>Gender: </label>
+        <div class="gap display-flex">
+          <label class="bold">Gender: </label>
           <p id="user-gender">Gender Here</p>
         </div>
 
-        <div class="display-flex">
-          <label>Accessibility Needs: </label>
+        <div class="gap display-flex">
+          <label class="bold">Accessibility Needs: </label>
           <p id="user-accessibility">Accessibility Needs Here</p>
         </div>
       </div>
@@ -91,20 +94,20 @@
         <h2>Flight Preference</h2>
       </div>
       <div class="info-items">
-        <div class="display-flex">
-          <label>Seat Preference: </label>
+        <div class="gap display-flex">
+          <label class="bold">Seat Preference: </label>
           <p id="user-seat">Seat Preference here</p>
         </div>
 
-        <div class="display-flex">
-          <label>Special Assistance: </label>
+        <div class="gap display-flex">
+          <label class="bold">Special Assistance: </label>
           <p id="user-assistance">Special Assistance Here</p>
         </div>
       </div>
     </div>
 
     <div class="past-bookings centered">
-      <div class="booking card">Random booking card</div>
+      <div class="booking">Random booking card</div>
     </div>
 
     <script src="/frontend/scripts/profile.js"></script>

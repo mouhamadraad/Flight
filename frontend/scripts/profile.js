@@ -1,3 +1,5 @@
+const fullName = document.getElementById("full-name");
+const email = document.getElementById("email");
 const userGreeting = document.getElementById("user-greeting");
 const userGender = document.getElementById("user-gender");
 const editBtn = document.getElementById("edit-btn");
@@ -5,8 +7,16 @@ const confirmBtn = document.getElementById("confirm-btn");
 const cancelBtn = document.getElementById("cancel-btn");
 const overlay = document.getElementById("overlay");
 const editPopup = document.getElementById("edit-popup");
-const userID = localStorage.getItem("UserID");
+const userAccessibility = document.getElementById("user-accessibility");
+const userSeat = document.getElementById("user-seat");
+const userAssistance = document.getElementById("user-assistance");
+const logout = document.getElementById("logout");
 
+logout.addEventListener("click", () => {
+  window.location.href = "/frontend/pages/signin.html";
+});
+
+const userID = localStorage.getItem("UserID");
 function toggleButtons() {
   editBtn.classList.add("hidden");
   confirmBtn.classList.remove("hidden");
@@ -27,9 +37,17 @@ cancelBtn.addEventListener("click", () => {
   exitEditing();
 });
 
-editBtn.addEventListener("click", () => {
-  toggleButtons();
-});
+function editButtonInfo(data) {
+  const fullName = userGreeting.textContent.trim().replace("Hi ", "");
+  document.getElementById("full-name").value = fullName;
+  document.getElementById("email").value = data.user_info[0].email;
+  const gender = userGender.textContent;
+  document.getElementById(gender.toLowerCase()).checked = true;
+  document.getElementById("accessibility").value =
+    userAccessibility.textContent;
+  document.getElementById("seat").value = userSeat.textContent;
+  document.getElementById("assistance").value = userAssistance.textContent;
+}
 
 try {
   fetch(
@@ -46,10 +64,17 @@ try {
       if (data.status === "error") {
         console.log(data.message);
       } else if (data.status === "success") {
-        console.log(data.user_info[0]);
         console.log("UserID retrieved successfully");
         userGreeting.innerHTML = "Hi " + `<b> ${data.user_info[0].name}</b>`;
         userGender.textContent = data.user_info[0].gender;
+        userAccessibility.textContent = data.user_info[0].accessibility;
+        userSeat.textContent = data.user_info[0].seat;
+        userAssistance.textContent = data.user_info[0].assistance;
+
+        editBtn.addEventListener("click", () => {
+          toggleButtons();
+          editButtonInfo(data);
+        });
       }
     });
 } catch (error) {
@@ -84,11 +109,15 @@ confirmBtn.addEventListener("click", () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Response from server:", data);
         if (data.status === "error") {
           console.log("Error updating data");
         } else if (data.status === "success") {
           exitEditing();
+          userGreeting.innerHTML = "Hi " + `<b> ${fullName}</b>`;
+          userGender.textContent = gender;
+          userAccessibility.textContent = accessibility;
+          userSeat.textContent = seat;
+          userAssistance.textContent = assistance;
         }
       });
   } catch (error) {

@@ -1,5 +1,10 @@
 const errorMessage = document.getElementById("error-message");
 const login = document.getElementById("login");
+const signupLink = document.getElementById("signup-link");
+
+signupLink.addEventListener("click", () => {
+  window.location.href = "/frontend/pages/signup.html";
+});
 
 login.addEventListener("click", () => {
   try {
@@ -24,7 +29,7 @@ login.addEventListener("click", () => {
         } else if (data.status === "success") {
           console.log(data.UserID);
           localStorage.setItem("UserID", data.UserID);
-          //   window.location.href = "";
+          window.location.href = "/frontend/pages/profile.html";
           console.log("Sign in successfully");
         }
       });

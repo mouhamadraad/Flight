@@ -1,6 +1,11 @@
 const registerBtn = document.getElementById("register");
 const errorMessage = document.getElementById("error-message");
+const loginLink = document.getElementById("login-link");
 const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+
+loginLink.addEventListener("click", () => {
+  window.location.href = "/frontend/pages/signin.html";
+});
 
 function addUser() {
   try {
@@ -32,8 +37,8 @@ function addUser() {
         if (data.status === "error") {
           errorMessage.textContent = data.message;
         } else {
-          //   window.location.href = "/HTML/index.html";
           console.log("You signed in");
+          window.location.href = "/frontend/pages/signin.html";
         }
       });
   } catch (error) {
