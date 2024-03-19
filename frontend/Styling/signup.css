@@ -47,6 +47,13 @@ body {
   justify-content: space-evenly;
 }
 
+.radio-btn {
+  color: #fbfbfb;
+}
+
+.login-link {
+  color: #fbfbfb;
+}
 .login-link a {
   color: #3ab8ff;
 }

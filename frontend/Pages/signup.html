@@ -47,13 +47,13 @@
         </div>
 
         <div class="user-login-radio">
-          <label for="gender">Gender:</label><br />
-          <input type="radio" id="male" name="gender" value="male" />
-          <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="female" />
-          <label for="female">Female</label>
-          <input type="radio" id="other" name="gender" value="other" />
-          <label for="other">Other</label>
+          <label for="gender" class="radio-btn">Gender:</label><br />
+          <input type="radio" id="male" name="gender" />
+          <label for="male" class="radio-btn">Male</label>
+          <input type="radio" id="female" name="gender" />
+          <label for="female radio-btn" class="radio-btn">Female</label>
+          <input type="radio" id="other" name="gender" />
+          <label for="other" class="radio-btn">Other</label>
         </div>
 
         <div id="error-message" class="error-message">
@@ -66,7 +66,9 @@
           <a>Register</a>
         </div>
 
-        <div class="login-link">Already have an account? <a>Login</a></div>
+        <div class="login-link">
+          Already have an account? <a id="login-link">Sign in</a>
+        </div>
       </div>
     </div>
     <script src="/frontend/scripts/signup.js"></script>

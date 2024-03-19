@@ -29,8 +29,13 @@ header {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 40%;
+  width: 30%;
   margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .user-card p {
@@ -44,7 +49,16 @@ header {
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
-  width: 80%;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .title h2 {
@@ -72,15 +86,12 @@ header {
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
-  width: 80%;
-}
-
-.booking {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .edit-btn {
@@ -88,20 +99,24 @@ header {
 }
 
 .edit-btn button {
-  color: #090909;
   padding: 0.7em 1.7em;
   font-size: 18px;
   border-radius: 0.5em;
-  background: #e8e8e8;
+
   cursor: pointer;
-  border: 1px solid #e8e8e8;
+
   transition: all 0.3s;
-  box-shadow: 0px 6px 12px #c5c5c5, 0px -6px 12px #ffffff;
+
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px;
 }
 
 .edit-btn button:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  color: #fbfbfb;
 }
 
 .edit-btn button:hover {
@@ -113,15 +128,26 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  padding-top: 5%;
+  padding: 5%;
   width: 50%;
-  height: 60vh;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(0, 178, 248);
   z-index: 100;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.user-login-radio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .overlay {
@@ -130,6 +156,24 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(63, 63, 63, 0.8);
   z-index: 99;
+}
+
+.gap {
+  gap: 10px;
+}
+
+.header-btn {
+  padding: 1%;
+  border-radius: 10px;
+}
+
+.header-btn {
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  background-color: #3ab8ff;
+  transition: background-color 0.3s ease-in-out;
 }
