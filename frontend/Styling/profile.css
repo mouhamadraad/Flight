@@ -4,20 +4,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 5%;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-right {
-  display: flex;
-  gap: 20px;
-}
-
 .logo h2 {
   margin: 0;
   color: #333;
@@ -164,16 +150,7 @@ header {
   gap: 10px;
 }
 
-.header-btn {
-  padding: 1%;
-  border-radius: 10px;
-}
-
-.header-btn {
-  cursor: pointer;
-}
-
-.header-btn:hover {
-  background-color: #3ab8ff;
-  transition: background-color 0.3s ease-in-out;
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

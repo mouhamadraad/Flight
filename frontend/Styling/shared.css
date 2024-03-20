@@ -86,3 +86,26 @@ input:focus {
 .button:hover a {
   background-color: #007197;
 }
+
+.header-right {
+  display: flex;
+  gap: 20px;
+}
+
+.header-btn {
+  padding: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  background-color: #3ab8ff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+}

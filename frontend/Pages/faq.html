@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/frontend/Styling/faq.css" />
+    <link rel="stylesheet" href="/frontend/Styling/shared.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>AirDash</h2>
+      </div>
+
+      <div class="header-right">
+        <h2 class="header-btn">Home</h2>
+        <h2 id="questions" class="header-btn">Questions</h2>
+        <h2 class="header-btn">Book</h2>
+        <h2 id="profile" class="header-btn">Profile</h2>
+        <h2 id="logout" class="header-btn">Logout</h2>
+      </div>
+    </header>
+
+    <div class="overlay hidden" id="overlay">
+      <div class="edit-popup hidden" id="edit-popup">
+        <h3 id="question-text"></h3>
+        <button class="editing" id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="title centered">
+      <h1>Frequently asked questions</h1>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-card">
+        <div class="faq-question">How high do airplanes go up?</div>
+        <div class="faq-question">Why do planes fly so high?</div>
+        <div class="faq-question">Is the plane safe from lightning?</div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          Why do airplane wings have a green and red light?
+        </div>
+        <div class="faq-question">Why do planes have ash trays?</div>
+        <div class="faq-question">
+          What happens to the lavatory toilet contents?
+        </div>
+      </div>
+    </div>
+    <script src="/frontend/scripts/faq.js"></script>
+  </body>
+</html>

@@ -7,7 +7,6 @@ axios
         data.forEach(feedback => {
             const row = document.createElement("tr");
             row.innerHTML = `
-            <td>${feedback.ReviewID}</td>
             <td>${feedback.UserID}</td>
             <td>${feedback.FlightID}</td>
             <td>${feedback.Rating}</td>

@@ -1,0 +1,93 @@
+.title {
+  margin: 2% 0%;
+}
+
+body {
+  background-image: url("/frontend/assets/profile-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.faq-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.faq-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+  padding: 10%;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  height: 5vh;
+  font-weight: 500;
+}
+
+.faq-question:hover {
+  background-color: #3ab8ff;
+  cursor: pointer;
+}
+
+.edit-popup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5%;
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 178, 248);
+  z-index: 100;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 63, 63, 0.8);
+  z-index: 99;
+}
+
+.editing {
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px;
+}
