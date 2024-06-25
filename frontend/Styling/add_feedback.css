@@ -1,10 +1,16 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     margin: 0;
     padding: 20px;
-  }
+    background-image: url("../assets/3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  } 
   
+
+
   .container {
     max-width: 600px;
     margin: 0 auto;

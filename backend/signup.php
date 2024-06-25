@@ -1,6 +1,6 @@
 <?php
 include ('connection.php');
-
+include ('config.php');
 //store user information from signup into the DB
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];

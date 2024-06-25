@@ -1,6 +1,7 @@
 <?php
 
 include('connection.php');
+include('config.php');
 
 $UserID = isset($_POST['UserID']) ? $_POST['UserID'] : '';
 $FlightID = isset($_POST['FlightID']) ? $_POST['FlightID'] : '';

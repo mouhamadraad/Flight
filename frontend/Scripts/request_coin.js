@@ -12,7 +12,7 @@ form.addEventListener("submit", function (event) {
 
   axios
     .post(
-      "http://localhost/Flight-System-Website/backend/request_coin.php",
+      "http://localhost/paract/Flight-System-Website/backend/request_coin.php",
       formData
     )
     .then((response) => {

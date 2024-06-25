@@ -6,7 +6,7 @@ const updateApprovalStatus = (requestID, newStatus) => {
     formData.append("ApprovalStatus", newStatus);
 
     axios
-        .post("http://localhost/Flight-System-Website/backend/update_approval_status.php", formData)
+        .post("http://localhost/paract/Flight-System-Website/backend/update_approval_status.php", formData)
         .then((response) => {
             const data = response.data;
             if (data.success) {
@@ -30,7 +30,7 @@ const updateApprovalStatus = (requestID, newStatus) => {
 };
 
 axios
-    .get("http://localhost/Flight-System-Website/backend/get_request_coin.php")
+    .get("http://localhost/paract/Flight-System-Website/backend/get_request_coin.php")
     .then(response => {
         const data = response.data;
         data.forEach(request => {

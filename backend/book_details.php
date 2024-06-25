@@ -52,7 +52,7 @@
 
    <div class="center">
     <center>
-       <a href="booking.php" class="btn">Book Flights</a>
+       <a href="book.php" class="btn">Book Flights</a>
        </center>
    </div>
     

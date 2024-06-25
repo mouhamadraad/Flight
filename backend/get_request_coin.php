@@ -1,6 +1,7 @@
 <?php
 
 include('connection.php');
+include('config.php');
 
 $query = $mysqli ->prepare('SELECT * FROM coinsrequest');
 

@@ -1,7 +1,7 @@
 const tableBody = document.getElementById("feedbackBody");
 
 axios
-    .get("http://localhost/Flight-System-Website/backend/get_feedback.php")
+    .get("http://localhost/paract/Flight-System-Website/backend/get_feedback.php")
     .then(response => {
         const data = response.data;
         data.forEach(feedback => {

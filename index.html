@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>travel website </title>
 
-    <link rel="stylesheet" href="Styling/flight.css">
+    <link rel="stylesheet" href="frontend/Styling/flight.css">
 
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,21 +33,15 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ms-auto">
+                  
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="frontend/Pages/signup.html">Register</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Book</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Package</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
+                      <a class="nav-link" href="frontend/Pages/signin.html">Login</a>
+                  </li>
+                  
                 </ul>
               
             </div>
@@ -61,11 +55,13 @@
     <!--home section start-->
     <div class="home">
         <div class="content">
+      
         <h1>Visit <span class="changecontent"></span></h1>
-            
-            <a href="#book"> Request Coins</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
         </div>
-    </div>
+    </div> 
+
+
     <!--home section end-->
 
 
@@ -79,8 +75,13 @@
           <h1><span>B</span>ook</h1>
       </div>
       <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+              <img src="frontend/assets/un.jpg" alt="">
+          </div>
+      </div>
   <div class="col-md-6 py-3 py-md-0">
-              <form method="post" action="../backend/search.php" class="form-inline">
+              <form method="post" action="backend/search.php" class="form-inline">
                   <div class="form-group">
                       <input type="text" id="DepartureCity" name="DepartureCity"  placeholder="Starting city" required>
                       <input type="text" id="ArrivalCity" name="ArrivalCity"  placeholder="Destination city">
@@ -89,7 +90,7 @@
                       <button type="submit" class="btn btn-primary">Search Flights</button>
                   </div>
               </form>
-              <form method="post" action="../backend/display.php" class="form-inline">
+              <form method="post" action="backend/display.php" class="form-inline">
                   <button type="submit" class="btn btn-primary">Show info</button>
               </form>
           </div>
@@ -115,27 +116,27 @@
 
         <div style="display: flex;flex-wrap: wrap;">
             <div class="col-md-4 py-3 py-md-0">
-
-                <div class="card">
-                    <img src="assets/king.png" alt="">
-                    <div class="card-body">
-                        <h3>United Kingdom </h3>
-                        
-                        <div class="star"></div>
-                        <i class="fa-solid fa-star checked"></i>
-                        <i class="fa-solid fa-star checked"></i>
-                        <i class="fa-solid fa-star checked"></i>
-                        <i class="fa-solid fa-star "></i>
-                        <i class="fa-solid fa-star "></i>
-                    </div>
-                    <h6>PRICE: <strong>$500</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+              <div class="card">
+                <img src="frontend/assets/Getty.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                <div class="card-body">
+                    <h3> UAE </h3>
+                  
+                    <div class="star"></div>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star "></i>
+                    <i class="fa-solid fa-star "></i>
                 </div>
+                <h6>PRICE: <strong>$600</strong></h6>
+                
+            </div>
+          
             </div>
             <div class="col-md-4 py-3 py-md-0">
 
                 <div class="card">
-                    <img src="assets/paris.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                    <img src="frontend/assets/paris.jpg" alt="" style="width:300px;height:208px;align-self: center;">
                     <div class="card-body">
                         <h3> Paris </h3>
                       
@@ -147,13 +148,13 @@
                         <i class="fa-solid fa-star "></i>
                     </div>
                     <h6>PRICE: <strong>$600</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+                    
                 </div>
             </div>
             <div class="col-md-4 py-3 py-md-0">
 
                 <div class="card">
-                    <img src="assets/siri.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                    <img src="frontend/assets/siri.jpg" alt="" style="width:300px;height:208px;align-self: center;">
                     <div class="card-body">
                         <h3> Pakistan </h3>
                       
@@ -165,13 +166,13 @@
                         <i class="fa-solid fa-star "></i>
                     </div>
                     <h6>PRICE: <strong>$400</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+                    
                 </div>
             </div>
-<div class="col-md-4 py-3 py-md-0">
+            <div class="col-md-4 py-3 py-md-0">
 
                 <div class="card">
-                    <img src="assets/taj-mahal.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                    <img src="frontend/assets/taj-mahal.jpg" alt="" style="width:300px;height:208px;align-self: center;">
                     <div class="card-body">
                         <h3> India </h3>
                         <div class="star"></div>
@@ -182,13 +183,13 @@
                         <i class="fa-solid fa-star "></i>
                     </div>
                     <h6>PRICE: <strong>$800</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+                    
                 </div>
             </div>
             <div class="col-md-4 py-3 py-md-0">
 
                 <div class="card">
-                    <img src="assets/i.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                    <img src="frontend/assets/i.jpg" alt="" style="width:300px;height:208px;align-self: center;">
                     <div class="card-body">
                         <h3> Italy </h3>
                     
@@ -200,13 +201,13 @@
                         <i class="fa-solid fa-star "></i>
                     </div>
                     <h6>PRICE: <strong>$600</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+                    
                 </div>
             </div>
             <div class="col-md-4 py-3 py-md-0">
 
                 <div class="card">
-                    <img src="assets/united_states.jpg" alt="" style="width:300px;height:208px;align-self: center;">
+                    <img src="frontend/assets/united_states.jpg" alt="" style="width:300px;height:208px;align-self: center;">
                     <div class="card-body">
                         <h3>United State </h3>
                        <div class="star"></div>
@@ -217,7 +218,7 @@
                         <i class="fa-solid fa-star "></i>
                     </div>
                     <h6>PRICE: <strong>$700</strong></h6>
-                    <a href="../backend/book_details.php">Book Now </a>
+                    
                 </div>
             </div>
         </div>
@@ -229,11 +230,112 @@
 
 
 
+  <!--services start -->
+  <section class="services" id="services">
+    <div class="container">
+        <div class="main-txt">
+            <h1><span>S</span>ervices</h1>
+        </div>
+    </div>
+    <div style="display:flex;flex-wrap: wrap;">
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-hotel"></i>
+                <div class="card-body">
+                    <h3>Affordable Hotel</h3>
+                </div>
+            </div>
+        </div>
 
 
 
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-utensils"></i>
+                <div class="card-body">
+                    <h3>Food and Drinks </h3>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-bullhorn"></i>
+                <div class="card-body">
+                    <h3>Safety Guide</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-globe-asia"></i>
+                <div class="card-body">
+                    <h3>Arround the world </h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-plane"></i>
+                <div class="card-body">
+                    <h3>Fast travel</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+                <i class="fas fa-hiking"></i>
+                <div class="card-body">
+                    <h3>Adventures</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--services end-->
+
+
+
+  <!--About start-->
+
+  <section class="About" id="about">
+    <div class="container">
+        <div class="main txt">
+            <h1>About <span>US</span></h1>
+        </div>
+
+        <div class="row" style="margin-top: 50px;"></div>
+
+        <div class="col-md-6 py-3 py-md-0"></div>
+        <div style="display:flex;flex-wrap: wrap;">
+            <img src="frontend/assets/w.jpg" alt="" style="width: 500px;height:400px;border-radius: 10px;">
+       
+
+        <div class="col-md-6 py-3 " style="margin-left: 20px; margin-top: 150px;">
+            <h2> How travel agency work </h2>
+            <p>The primary role of a travel agent is to help people make travel arrangements, which might include booking flights, hotels, sightseeing tours, and making dining recommendations. A travel agent assesses each customer's unique needs, preferences, and budget to ensure their trip goes as smoothly as possible.</p>
+            <button id="about-btn">Read more ...</button>
+        </div>
+        </div>
+    </div>
+
+</section>
+<!--About end-->
 
 
 
@@ -259,7 +361,6 @@
 
 <!--footer end-->
 
-<script src="flight.js"></script>
 
 </body>
 </html>

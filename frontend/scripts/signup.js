@@ -1,10 +1,10 @@
 const registerBtn = document.getElementById("register");
 const errorMessage = document.getElementById("error-message");
 const loginLink = document.getElementById("login-link");
-const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 loginLink.addEventListener("click", () => {
-  window.location.href = "/frontend/pages/signin.html";
+  window.location.href = "../Pages/signin.html";
 });
 
 function addUser() {
@@ -21,7 +21,7 @@ function addUser() {
     formData.append("password", password);
     formData.append("gender", gender);
 
-    fetch("http://127.0.0.1/Flight-System-Website/backend/signup.php", {
+    fetch("http://127.0.0.1/paract/Flight-System-Website/backend/signup.php", {
       method: "POST",
       body: formData,
     })
@@ -38,7 +38,7 @@ function addUser() {
           errorMessage.textContent = data.message;
         } else {
           console.log("You signed in");
-          window.location.href = "/frontend/pages/signin.html";
+          window.location.href = "../Pages/signin.html";
         }
       });
   } catch (error) {

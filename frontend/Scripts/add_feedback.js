@@ -15,7 +15,7 @@ form.addEventListener("submit", function (event) {
     formData.append("reviewText", reviewText);
 
     axios
-        .post("http://localhost/Flight-System-Website/backend/add_feedback.php", formData)
+        .post("http://localhost/paract/Flight-System-Website/backend/add_feedback.php", formData)
         .then((response) => {
             const data = response.data;
             if (data.success) {

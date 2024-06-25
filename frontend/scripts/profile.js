@@ -16,13 +16,13 @@ const profile = document.getElementById("profile");
 const amount = document.getElementById("amount");
 
 logout.addEventListener("click", () => {
-  window.location.href = "/frontend/pages/signin.html";
+  window.location.href = "../Pages/signin.html";
 });
 profile.addEventListener("click", () => {
-  window.location.href = "/frontend/pages/profile.html";
+  window.location.href = "../Pages/profile.html";
 });
 questions.addEventListener("click", () => {
-  window.location.href = "/frontend/pages/faq.html";
+  window.location.href = "../Pages/faq.html";
 });
 
 const userID = localStorage.getItem("UserID");
@@ -61,7 +61,7 @@ function editButtonInfo(data) {
 
 try {
   fetch(
-    "http://127.0.0.1/Flight-System-Website/backend/signup.php?UserID=" +
+    "http://127.0.0.1/paract/Flight-System-Website/backend/signup.php?UserID=" +
       userID,
     {
       method: "GET",
@@ -112,7 +112,7 @@ confirmBtn.addEventListener("click", () => {
   formData.append("amount", amount);
 
   try {
-    fetch("http://127.0.0.1/Flight-System-Website/backend/updateUser.php", {
+    fetch("http://127.0.0.1/paract/Flight-System-Website/backend/updateUser.php", {
       method: "POST",
       body: formData,
     })

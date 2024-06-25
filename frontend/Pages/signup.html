@@ -1,76 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/frontend/Styling/shared.css" />
-    <link rel="stylesheet" href="/frontend/Styling/signup.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha384-..."
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="wrapper centered flex-direction-column">
-      <div class="signup-title centered">
-        <h1>Join Our Skyward Journey: Create Your Flight Profile</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Styling/shared.css" />
+  <link rel="stylesheet" href="../Styling/signup.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-..."
+  />
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper centered flex-direction-column">
+    <div class="signup-title centered">
+      <h1>Join Our Skyward Journey: Create Your Flight Profile</h1>
+    </div>
+
+    <form
+      class="form-wrapper centered flex-direction-column"
+      id="form-wrapper"
+    >
+      <div class="user-login">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Full Name" id="full-name" />
       </div>
 
-      <form
-        class="form-wrapper centered flex-direction-column"
-        id="form-wrapper"
-      >
-        <div class="user-login">
-          <i class="fa-solid fa-user"></i>
-          <input placeholder="Full Name" id="full-name" />
-        </div>
+      <div class="user-login">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email" id="email" />
+      </div>
 
-        <div class="user-login">
-          <i class="fa-solid fa-envelope"></i>
-          <input placeholder="Email" id="email" />
-        </div>
+      <div class="user-login">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" id="password" />
+      </div>
 
-        <div class="user-login">
-          <i class="fa-solid fa-lock"></i>
-          <input type="password" placeholder="Password" id="password" />
-        </div>
+      <div class="user-login">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Confirm Password" id="confirmPassword" />
+      </div>
 
-        <div class="user-login">
-          <i class="fa-solid fa-lock"></i>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            id="confirmPassword"
-          />
-        </div>
+      <div class="user-login-radio">
+        <label for="gender" class="radio-btn">Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male" class="radio-btn">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female" class="radio-btn">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other" class="radio-btn">Other</label>
+      </div>
 
-        <div class="user-login-radio">
-          <label for="gender" class="radio-btn">Gender:</label><br />
-          <input type="radio" id="male" name="gender" />
-          <label for="male" class="radio-btn">Male</label>
-          <input type="radio" id="female" name="gender" />
-          <label for="female radio-btn" class="radio-btn">Female</label>
-          <input type="radio" id="other" name="gender" />
-          <label for="other" class="radio-btn">Other</label>
-        </div>
+      <div id="error-message" class="error-message">
+        <p></p>
+      </div>
+    </form>
 
-        <div id="error-message" class="error-message">
-          <p></p>
-        </div>
-      </form>
+    <div class="buttons-wrapper centered">
+      <div class="button" id="register">
+        <a>Register</a>
+      </div>
 
-      <div class="buttons-wrapper centered">
-        <div class="button" id="register">
-          <a>Register</a>
-        </div>
-
-        <div class="login-link">
-          Already have an account? <a id="login-link">Sign in</a>
-        </div>
+      <div class="login-link">
+        Already have an account? <a id="login-link">Sign in</a>
       </div>
     </div>
-    <script src="/frontend/scripts/signup.js"></script>
-  </body>
+  </div>
+  <script src="../Scripts/signup.js"></script>
+</body>
 </html>
