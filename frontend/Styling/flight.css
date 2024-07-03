@@ -424,3 +424,57 @@ border-radius: 10px;
   
   
   /*footer end */
+
+
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  /* Home Section */
+  .home .content h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Book Section */
+  .book .form-inline {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .book input[type="text"],
+  .book input[type="date"],
+  .book button[type="submit"] {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Packages Section */
+  .packages .card {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Services Section */
+  .services .card {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* About Section */
+  .About {
+    padding: 30px;
+  }
+  .About img {
+    max-width: 100%;
+  }
+}
+
+/* Footer Section */
+#footer {
+  padding: 20px 0;
+}
